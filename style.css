@@ -1,0 +1,126 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background:rgba(0, 0, 0, 0.74);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: #000; */
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    display: block;
+    font-size: 23px;
+    color: dodgerblue;
+    /* background: blue; */
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+}
+
+a:hover::before {
+    animation: survol 1s linear forwards;
+    border-radius: 2px;
+}
+
+@keyframes survol {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #adadad; 
+        border-bottom-color: transparent;
+        border-left-color: #adadad;
+        border-right-color: transparent;
+        border-radius: 2px;
+    }
+
+    50% {
+        width: 100%;
+        height: 0%;
+        border-top-color: dodgerblue; 
+        border-bottom-color: transparent;
+        border-left-color: dodgerblue;
+        border-right-color: transparent;
+        border-radius: 2px;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: dodgerblue; 
+        border-bottom-color: transparent;
+        border-left-color: dodgerblue;
+        border-right-color: dodgerblue;
+        border-radius: 2px;
+    }
+
+}
+
+
+a::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+}
+
+a:hover::after {
+    animation: survol2 1s linear forwards;
+    border-radius: 2px;
+}
+
+@keyframes survol2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent; 
+        border-bottom-color: #adadad;
+        border-left-color: #adadad;
+        border-right-color: transparent;
+        border-radius: 2px;
+    }
+
+    50% {
+        width: 0%;
+        height: 100%;
+        border-top-color: transparent; 
+        border-bottom-color: dodgerblue;
+        border-left-color: dodgerblue;
+        border-right-color: transparent;
+        border-radius: 2px;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: dodgerblue; 
+        border-bottom-color: dodgerblue;
+        border-left-color: dodgerblue;
+        border-right-color: transparent;
+        border-radius: 2px;
+    }
+
+}
